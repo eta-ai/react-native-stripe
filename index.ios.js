@@ -28,6 +28,8 @@ var NativeStripe = {
   createTokenWithCard: StripeNativeManager.createTokenWithCard,
   success: StripeNativeManager.success,
   failure: StripeNativeManager.failure,
+  validateCCNumber: StripeNativeManager.validateCCNumber,
+  validateCCCvc: StripeNativeManager.validateCCCvc,
 
   init: (stripePublishableKey, applePayMerchantId) => {
     return StripeNativeManager.initWithStripePublishableKey(stripePublishableKey, applePayMerchantId);

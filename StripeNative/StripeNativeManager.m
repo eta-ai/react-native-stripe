@@ -282,4 +282,29 @@ RCT_EXPORT_METHOD(createTokenWithCard:(NSDictionary *)cardParams resolver:(RCTPr
                                           }];
 }
 
+RCT_EXPORT_METHOD(validateCCNumber:(nonnull NSString *)cardNumber resolver:(RCTPromiseResolveBlock)resolve rejector:(RCTPromiseRejectBlock)reject) {
+    STPCardValidationState state = [STPCardValidator validationStateForNumber:cardNumber validatingCardBrand:true];
+    
+    if (state == STPCardValidationStateInvalid) {
+        resolve(@"invalid");
+    } else if (state == STPCardValidationStateIncomplete) {
+        resolve(@"incomplete");
+    } else {
+        resolve(@"valid");
+    }
+}
+
+RCT_EXPORT_METHOD(validateCCCvc:(NSString *)cvc cardNumber:(NSString *)number resolver:(RCTPromiseResolveBlock)resolve rejector:(RCTPromiseRejectBlock)reject) {
+    STPCardBrand brand = [STPCardValidator brandForNumber:number];
+    STPCardValidationState state = [STPCardValidator validationStateForCVC:cvc cardBrand:brand];
+    
+    if (state == STPCardValidationStateInvalid) {
+        resolve(@"invalid");
+    } else if (state == STPCardValidationStateIncomplete) {
+        resolve(@"incomplete");
+    } else {
+        resolve(@"valid");
+    }
+}
+
 @end
