@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F3A6BA41ACFC16C00CA65F7 /* StripeNativeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A6BA21ACFC16C00CA65F7 /* StripeNativeManager.m */; };
+		C99EBF201C99EDCF00D99605 /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99EBF1F1C99EDCF00D99605 /* Stripe.framework */; };
 		D81E58851C48498600C114CB /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E58821C48498600C114CB /* PaymentViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		4F3A6B5B1ACFBCC500CA65F7 /* libStripeNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStripeNative.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3A6BA11ACFC16C00CA65F7 /* StripeNativeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StripeNativeManager.h; path = StripeNative/StripeNativeManager.h; sourceTree = "<group>"; };
 		4F3A6BA21ACFC16C00CA65F7 /* StripeNativeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StripeNativeManager.m; path = StripeNative/StripeNativeManager.m; sourceTree = "<group>"; };
+		C99EBF1F1C99EDCF00D99605 /* Stripe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Stripe.framework; sourceTree = "<group>"; };
 		D81E58811C48498600C114CB /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentViewController.h; path = StripeNative/PaymentViewController.h; sourceTree = "<group>"; };
 		D81E58821C48498600C114CB /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentViewController.m; path = StripeNative/PaymentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99EBF201C99EDCF00D99605 /* Stripe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,7 @@
 		4F3A6B521ACFBCC500CA65F7 = {
 			isa = PBXGroup;
 			children = (
+				C99EBF1F1C99EDCF00D99605 /* Stripe.framework */,
 				D81E58811C48498600C114CB /* PaymentViewController.h */,
 				D81E58821C48498600C114CB /* PaymentViewController.m */,
 				4F3A6BA11ACFC16C00CA65F7 /* StripeNativeManager.h */,
